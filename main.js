@@ -22,10 +22,18 @@ const renderData = async (pokemonName) => {
 const addPokemon = (pokemon)=>{
     const box = document.createElement('p')
     box.innerHTML = `
-    <div class="card" style="width: 18rem;">
-        <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="...">
-            <p class="card-text"><b>${pokemon.name}<b></p>
-        </div>
-    </div>`
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${pokemon.sprites.front_default}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${pokemon.name}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+  `
     document.body.append(box)
 }
